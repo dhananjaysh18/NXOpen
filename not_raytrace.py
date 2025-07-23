@@ -1,11 +1,5 @@
-# NX Camera Automation - Config-Driven Version
-# All settings loaded from camera_config.json
-# Clean version without hardcoded specs or print statements
-
-import math
 import os
 import json
-import time
 import NXOpen
 import NXOpen.Display
 
