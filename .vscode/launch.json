@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "NX Python Script (simulate)",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "envFile": "${workspaceFolder}/.vscode/.env",
+      "pythonPath": "C:\\Program Files\\Python311\\python.exe"
+      //"pythonPath": "C:/Program Files/Siemens/NX2412/UGII/python.exe"
+    }
+  ]
+}

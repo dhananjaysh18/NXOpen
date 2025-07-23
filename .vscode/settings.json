@@ -1,0 +1,13 @@
+{
+  "python.defaultInterpreterPath": "C:\\Program Files\\Python311\\python.exe",
+  //"python.defaultInterpreterPath": "C:/Program Files/Siemens/NX2412/NXBIN/python/python.exe",
+  "python.analysis.extraPaths": [
+    "C:/Program Files/Siemens/NX2412/UGII",
+    "C:/Program Files/Siemens/NX2412/UGOPEN/pythonStubs"
+  ],
+  "python.envFile": "${workspaceFolder}/.vscode/.env",
+  "python.analysis.typeCheckingMode": "off", 
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true
+}

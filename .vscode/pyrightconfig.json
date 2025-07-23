@@ -1,0 +1,6 @@
+{
+  "extraPaths": [
+    "C:/Program Files/Siemens/NX2412/UGII"
+  ],
+  "exclude": ["**/__pycache__"]
+}
