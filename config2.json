@@ -190,21 +190,6 @@
       "focal_distance": 25.0,
       "aperture": "F8",
       "depth_of_field": true
-    },
-    {
-      "camera_name": "ohne_Perspective_Low",
-      "view_type": "Perspective_Low",
-      "description": "Low perspective view",
-      "pos_x": 600.0,
-      "pos_y": -600.0,
-      "pos_z": 100.0,
-      "target_x": 0.0,
-      "target_y": 0.0,
-      "target_z": 200.0,
-      "fov_angle": 16.29,
-      "focal_distance": 25.0,
-      "aperture": "F11",
-      "depth_of_field": true
     }
   ]
 }

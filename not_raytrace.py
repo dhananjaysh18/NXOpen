@@ -2,6 +2,7 @@ import os
 import json
 import NXOpen
 import NXOpen.Display
+import time
 
 
 def main():
