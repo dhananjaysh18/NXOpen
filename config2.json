@@ -28,7 +28,7 @@
     "ray_tracing_brightness": 1.0,
     "ray_tracing_timeout_seconds": 30,
     "use_transparent_background": false,
-    "ray_tracing_quality": "HighQuality",
+    "ray_tracing_quality": "High",
     "center_object_first": true,
     "centering_method": "fit_center",
     "zoom_after_center": 1.1,
