@@ -226,7 +226,7 @@ def process_camera_with_true_raytracing(the_session, work_part, config, camera_s
     output_filename = os.path.join(output_directory, f"{config['camera_name']}.{image_format}")
     studioImageCaptureBuilder.NativeFileBrowser = output_filename
     
-    image_width = global_settings.get("image_width", camera_specs.get("pixel_width", 1377))
+    image_width = global_settings.get("image_width", camera_specs.get("pixel_width", 2048))
     image_height = global_settings.get("image_height", camera_specs.get("pixel_height", 2448))
     
     imagedimensionsdouble = [None] * 2
