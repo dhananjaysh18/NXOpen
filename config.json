@@ -25,7 +25,7 @@
   "camera_configurations": [
     {
       "camera_name": "01_front_view",
-      "description": "Front View - Looking at hole pattern face (-Z direction)",
+      "description": "Front View",
       "pos_x": 0.0,
       "pos_y": 0.0,
       "pos_z": 400.0,
@@ -35,7 +35,7 @@
     },
     {
       "camera_name": "02_back_view",
-      "description": "Back View - Looking at back face (+Z direction)",
+      "description": "Back View",
       "pos_x": 0.0,
       "pos_y": 0.0,
       "pos_z": -400.0,
@@ -45,7 +45,7 @@
     },
     {
       "camera_name": "03_top_view",
-      "description": "Top View - Looking down (-X direction)",
+      "description": "Top View",
       "pos_x": 400.0,
       "pos_y": 0.0,
       "pos_z": 0.0,
@@ -55,7 +55,7 @@
     },
     {
       "camera_name": "04_bottom_view",
-      "description": "Bottom View - Looking up (+X direction)",
+      "description": "Bottom View",
       "pos_x": -400.0,
       "pos_y": 0.0,
       "pos_z": 0.0,
@@ -65,7 +65,7 @@
     },
     {
       "camera_name": "05_right_view",
-      "description": "Right Side View - Looking from right (+Y direction)",
+      "description": "Right Side View",
       "pos_x": 0.0,
       "pos_y": -400.0,
       "pos_z": 0.0,
@@ -75,7 +75,7 @@
     },
     {
       "camera_name": "06_left_view",
-      "description": "Left Side View - Looking from left (-Y direction)",
+      "description": "Left Side View",
       "pos_x": 0.0,
       "pos_y": 400.0,
       "pos_z": 0.0,
@@ -125,7 +125,7 @@
     },
     {
       "camera_name": "11_isometric",
-      "description": "Isometric View - Classic 3D perspective",
+      "description": "Isometric View - looking from the front bottom corner",
       "pos_x": 231.0,
       "pos_y": -231.0,
       "pos_z": 231.0,
