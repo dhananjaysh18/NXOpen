@@ -1,7 +1,7 @@
 
 I want High quylity Studio images, If possible Truestudio images if that class is not restricted for non-interactive session like RayTracedStudio class
 
-The main script takes camera parameters from the json file, like dimensions of output image, views/positions, background color, maybe lights, brightness level(eum), scale/fit(scale is better like 0.9), I do not whatelse available in NX maybe scenes, I just want diverese images 
+The main script takes camera parameters from the json file, like dimensions of output image, views/positions, background color, maybe lights, brightness level(enumerator), scale/fit(scale is better like 0.9), I do not whatelse available in NX maybe scenes, I just want diverese images 
 
 
 Views I need: Front, top, bottom, back, right, left, front right side 45°, front left side 45°, front top side 45°, front bottom side 45° and isometric(camera position should be from front bottom cornor to up)
