@@ -1,0 +1,137 @@
+{
+  "settings": {
+    "output_directory": "C:\\Users\\iftdev\\Desktop\\Dhananjay Sharma\\autoscript_POC\\output_images\\3jaw",
+    "image_format": "png",
+    "dpi": 400,
+    "centering_method": "fit",
+    "margin_factor": 0.9
+  },
+  "real_camera_specs": {
+    "model": "IDS GV-51F0CP-M-GL",
+    "sensor_size": "1/1.8 inch",
+    "sensor_width_pixels": 2064,
+    "sensor_height_pixels": 2472,
+    "pixel_size_um": 2.74,
+    "optical_surface_width_mm": 6.773,
+    "optical_surface_height_mm": 5.655,
+    "sensor_diagonal_mm": 8.82,
+    "focal_length_mm": 25.0,
+    "horizontal_fov_degrees": 16.29,
+    "vertical_fov_degrees": 12.11,
+    "diagonal_fov_degrees": 20.20,
+    "output_width_pixels": 2472,
+    "output_height_pixels": 2064
+  },
+  "camera_configurations": [
+    {
+      "camera_name": "01_front_view",
+      "description": "Front View - Looking at hole pattern face (-Z direction)",
+      "pos_x": 0.0,
+      "pos_y": 0.0,
+      "pos_z": 400.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "02_back_view",
+      "description": "Back View - Looking at back face (+Z direction)",
+      "pos_x": 0.0,
+      "pos_y": 0.0,
+      "pos_z": -400.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "03_top_view",
+      "description": "Top View - Looking down (-X direction)",
+      "pos_x": 400.0,
+      "pos_y": 0.0,
+      "pos_z": 0.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "04_bottom_view",
+      "description": "Bottom View - Looking up (+X direction)",
+      "pos_x": -400.0,
+      "pos_y": 0.0,
+      "pos_z": 0.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "05_right_view",
+      "description": "Right Side View - Looking from right (+Y direction)",
+      "pos_x": 0.0,
+      "pos_y": -400.0,
+      "pos_z": 0.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "06_left_view",
+      "description": "Left Side View - Looking from left (-Y direction)",
+      "pos_x": 0.0,
+      "pos_y": 400.0,
+      "pos_z": 0.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "07_front_top_45",
+      "description": "Front Top 45° - Looking from front-top angle",
+      "pos_x": 283.0,
+      "pos_y": 0.0,
+      "pos_z": 283.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "08_front_bottom_45",
+      "description": "Front Bottom 45° - Looking from front-bottom angle",
+      "pos_x": -283.0,
+      "pos_y": 0.0,
+      "pos_z": 283.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "09_front_right_45",
+      "description": "Front Right 45° - Looking from front-right angle",
+      "pos_x": 0.0,
+      "pos_y": -283.0,
+      "pos_z": 283.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "10_front_left_45",
+      "description": "Front Left 45° - Looking from front-left angle",
+      "pos_x": 0.0,
+      "pos_y": 283.0,
+      "pos_z": 283.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    },
+    {
+      "camera_name": "11_isometric",
+      "description": "Isometric View - Classic 3D perspective",
+      "pos_x": 231.0,
+      "pos_y": -231.0,
+      "pos_z": 231.0,
+      "target_x": 0.0,
+      "target_y": 0.0,
+      "target_z": 0.0
+    }
+  ]
+}

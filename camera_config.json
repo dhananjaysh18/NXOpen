@@ -1,0 +1,124 @@
+{
+  "camera_settings": {
+    "sensor": {
+      "width_mm": 6.773,
+      "height_mm": 5.655,
+      "diagonal_mm": 8.82,
+      "resolution_width": 2472,
+      "resolution_height": 2064,
+      "pixel_size_um": 2.74
+    },
+    "lens": {
+      "focal_length_mm": 12.0,
+      "aperture_f_stop": 2.8,
+      "field_of_view_degrees": 45.0
+    },
+    "capture": {
+      "output_format": "png",
+      "dpi": 400,
+      "dimensions": {
+        "width": 2472,
+        "height": 2064
+      },
+      "background_color": [1.0, 1.0, 1.0],
+      "enhance_edges": false,
+      "display_style": "Studio",
+      "zoom_factor": 0.9
+    }
+  },
+  "views": [
+    {
+      "name": "front",
+      "description": "Front View",
+      "orientation": "Custom",
+      "camera_position": [0, -500, 0],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0, 1]
+    },
+    {
+      "name": "top",
+      "description": "Top View",
+      "orientation": "Custom",
+      "camera_position": [0, 0, 500],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 1, 0]
+    },
+    {
+      "name": "bottom",
+      "description": "Bottom View",
+      "orientation": "Custom",
+      "camera_position": [0, 0, -500],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, -1, 0]
+    },
+    {
+      "name": "back",
+      "description": "Back View",
+      "orientation": "Custom",
+      "camera_position": [0, 500, 0],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0, 1]
+    },
+    {
+      "name": "right",
+      "description": "Right View",
+      "orientation": "Custom",
+      "camera_position": [500, 0, 0],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0, 1]
+    },
+    {
+      "name": "left",
+      "description": "Left View",
+      "orientation": "Custom",
+      "camera_position": [-500, 0, 0],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0, 1]
+    },
+    {
+      "name": "front_right_45",
+      "description": "Front Right Side 45 degrees",
+      "orientation": "Custom",
+      "camera_position": [353.55, -353.55, 0],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0, 1]
+    },
+    {
+      "name": "front_left_45",
+      "description": "Front Left Side 45 degrees",
+      "orientation": "Custom",
+      "camera_position": [-353.55, -353.55, 0],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0, 1]
+    },
+    {
+      "name": "front_top_45",
+      "description": "Front Top Side 45 degrees",
+      "orientation": "Custom",
+      "camera_position": [0, -353.55, 353.55],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0.707, 0.707]
+    },
+    {
+      "name": "front_bottom_45",
+      "description": "Front Bottom Side 45 degrees",
+      "orientation": "Custom",
+      "camera_position": [0, -353.55, -353.55],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0.707, -0.707]
+    },
+    {
+      "name": "isometric",
+      "description": "Isometric View",
+      "orientation": "Custom",
+      "camera_position": [288.68, -288.68, 288.68],
+      "target_position": [0, 0, 0],
+      "up_vector": [0, 0, 1]
+    }
+  ],
+  "output_settings": {
+    "base_directory": "C:\\Users\\iftdev\\Desktop\\CAD_Images",
+    "file_prefix": "CAD",
+    "create_subdirectories": false
+  }
+}
