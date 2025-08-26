@@ -1,6 +1,12 @@
 ## This script is saving images with Blue circle may be that is origin marker(which i do not want).
 ## The saved images are not correct positions the i way i want, as the front view is ok but the object is in 90° vertical.
-## I do not know how to set logic here to get camera parameters input like sensor size, working dis 
+## I do not know how to set logic here to get camera parameters input like sensor size, working distance of real camera(that i change in the json file) 
+
+## Setting brightness, scale or output image, dimensions 2472x2064, or background color, If easliy implemented also then lights 
+# not lighting (as in the documentation it is written it only works in interactive session)
+## In the end i need high quality.
+## this script is using config.json 
+
 import os
 import json
 import math
