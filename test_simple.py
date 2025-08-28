@@ -1,9 +1,9 @@
 ## This script is saving images with Blue circle may be that is origin marker(which i do not want).
 ## The saved images are not correct positions the i way i want, as the front view is ok but the object is in 90° vertical.
-## I do not know how to set logic here to get camera parameters input like sensor size, working distance of real camera(that i change in the json file) 
+## I do not know how to set logic here to get camera parameters input like sensor size, working distance of real camera (that i change in the json file) 
 
-## Setting brightness, scale or output image, dimensions 2472x2064, or background color, If easliy implemented also then lights 
-# not lighting (as in the documentation it is written it only works in interactive session)
+## Setting brightness, scale or output image, dimensions 2472x2064, or background color from json file 
+# changable lighting in TrueStudio if available, 
 ## In the end i need high quality.
 ## this script is using config.json 
 
@@ -30,21 +30,38 @@ def main():
     output_directory = global_settings.get("output_directory")
     os.makedirs(output_directory, exist_ok=True)
     
-    setup_studio_rendering(the_session, work_part)
+    setup_true_studio_rendering(the_session, work_part)
     
     for i, config in enumerate(camera_configs):
         process_camera(the_session, work_part, config, camera_specs, output_directory, global_settings)
 
 
-def setup_studio_rendering(the_session, work_part):
-    markId1 = the_session.SetUndoMark(NXOpen.Session.MarkVisibility.Invisible, "Setup Centered Studio")
-    trueStudioBuilder1 = work_part.TrueStudioObjs.CreateTrueStudioBuilder(NXOpen.Display.TrueStudio.Null)
-    trueStudioBuilder1.ModeToggle = True
+def setup_true_studio_rendering(the_session, work_part):
+    """Setup TrueStudio rendering for non-interactive sessions"""
+    markId1 = the_session.SetUndoMark(NXOpen.Session.MarkVisibility.Invisible, "Setup TrueStudio")
+    
+    # Create TrueStudioBuilder (works in non-interactive mode)
+    trueStudioBuilder = work_part.TrueStudioObjs.CreateTrueStudioBuilder(NXOpen.Display.TrueStudio.Null)
+    
+    # Enable TrueStudio mode
+    trueStudioBuilder.ModeToggle = True
+    
+    # Set render method (for better quality)
+    # Available options: Interactive, Production, Balanced
+    trueStudioBuilder.RenderMethodType = NXOpen.Display.TrueStudioBuilder.RenderMethod.FullRender #I want use best image output render method
+    
+    # Set global material type (default material when none applied to objects)
+
+    trueStudioBuilder.GlobalMaterialType = NXOpen.Display.TrueStudioBuilder.GlobalMaterial.ShinyMetalColorwash # I want also change this later according to requirements
+
+    # Apply the TrueStudio settings
+    nXObject = trueStudioBuilder.Commit()
+    trueStudioBuilder.Destroy()
+    
+    # Set the view rendering style to Studio (this works with TrueStudio)
     work_part.ModelingViews.WorkView.RenderingStyle = NXOpen.View.RenderingStyleType.Studio
-    nXObject1 = trueStudioBuilder1.Commit()
-    trueStudioBuilder1.Destroy()
-
-
+    
+    
 def create_camera_matrix(camera_pos, target_pos):
     """
     Create camera matrix for NX coordinate system
@@ -99,12 +116,11 @@ def create_camera_matrix(camera_pos, target_pos):
 def process_camera(the_session, work_part, config, camera_specs, output_directory, global_settings):
     work_view = work_part.ModelingViews.WorkView
     
-    # Hide all display elements
+    # Hide all display elements to remove origin marker and coordinate system
     work_view.TriadVisibility = False
     work_view.WcsVisibility = False
+    
     work_view.ChangePerspective(True)
-    
-    
     
     # Get camera parameters from config - NO TRANSFORMATION
     camera_pos = [config.get('pos_x', 0.0), config.get('pos_y', 0.0), config.get('pos_z', 0.0)]
@@ -135,16 +151,25 @@ def save_image(the_session, work_part, config, camera_specs, output_directory, g
     studioImageCaptureBuilder = work_part.Views.CreateStudioImageCaptureBuilder()
     studioImageCaptureBuilder.NativeFileBrowser = output_filename
     studioImageCaptureBuilder.DrawingSizeEnum = NXOpen.Display.StudioImageCaptureBuilder.DrawingSizeEnumType.Custom
+    
+    # Set higher DPI for better quality
     studioImageCaptureBuilder.DpiEnum = NXOpen.Display.StudioImageCaptureBuilder.DPIEnumType.Dpi400
     
+    # Get dimensions from camera specs
     width = camera_specs.get('output_width_pixels', 2472)
     height = camera_specs.get('output_height_pixels', 2064)
     
+    # Set custom dimensions (Note: NX expects [height, width] format)
     studioImageCaptureBuilder.SetImageDimensionsInteger([height, width])
+    
+    # Optional: Set background color if supported
+    # studioImageCaptureBuilder.BackgroundColor = NXOpen.Display.Color.White
     
     nXObject_export = studioImageCaptureBuilder.Commit()
     studioImageCaptureBuilder.Destroy()
     the_session.EndTaskEnvironment()
+    
+    print(f"Image saved: {output_filename}")
 
 
 if __name__ == '__main__':
