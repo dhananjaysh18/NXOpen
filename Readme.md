@@ -7,6 +7,8 @@ The main script takes camera parameters from the json file, like dimensions of o
 
 Prespective view is required
 
+Face edges option to select or not in json file
+
 Views I need: Front, top, bottom, back, right, left, front right side 45°, front left side 45°, front top side 45°, front bottom side 45° and isometric(camera position should be from front bottom cornor to up)
 
 

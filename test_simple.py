@@ -120,7 +120,7 @@ def process_camera(the_session, work_part, config, camera_specs, output_director
     work_view.TriadVisibility = False
     work_view.WcsVisibility = False
     
-    work_view.ChangePerspective(True)
+    work_view.ChangePerspective(True) 
     
     # Get camera parameters from config - NO TRANSFORMATION
     camera_pos = [config.get('pos_x', 0.0), config.get('pos_y', 0.0), config.get('pos_z', 0.0)]
@@ -154,10 +154,11 @@ def save_image(the_session, work_part, config, camera_specs, output_directory, g
     
     # Set higher DPI for better quality
     studioImageCaptureBuilder.DpiEnum = NXOpen.Display.StudioImageCaptureBuilder.DPIEnumType.Dpi400
-    
+    # use only if make difference is image quality
+    studioImageCaptureBuilder.AASamplesEnum = NXOpen.Display.StudioImageCaptureBuilder.AASamplesEnumType.Sam16X
     # Get dimensions from camera specs
-    width = camera_specs.get('output_width_pixels', 2472)
-    height = camera_specs.get('output_height_pixels', 2064)
+    width = camera_specs.get('output_width_pixels')
+    height = camera_specs.get('output_height_pixels')
     
     # Set custom dimensions (Note: NX expects [height, width] format)
     studioImageCaptureBuilder.SetImageDimensionsInteger([height, width])
