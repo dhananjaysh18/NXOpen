@@ -1,4 +1,6 @@
 
+Code fix for test_simple.py and config.json
+
 I want High quylity Studio images, If possible Truestudio images if that class is not restricted for non-interactive session like RayTracedStudio class
 
 The main script takes camera parameters from the json file, like dimensions of output image, views/positions, background color, maybe lights, brightness level(enumerator), scale/fit(scale is better like 0.9), I do not whatelse available in NX maybe scenes, I just want diverese images 
