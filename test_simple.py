@@ -162,8 +162,8 @@ def save_image(the_session, work_part, config, camera_specs, output_directory, g
     # Set custom dimensions (Note: NX expects [height, width] format)
     studioImageCaptureBuilder.SetImageDimensionsInteger([height, width])
     
-    # Optional: Set background color if supported
-    # studioImageCaptureBuilder.BackgroundColor = NXOpen.Display.Color.White
+    
+    studioImageCaptureBuilder.BackgroundColor = NXOpen.Display.Color.White
     
     nXObject_export = studioImageCaptureBuilder.Commit()
     studioImageCaptureBuilder.Destroy()

@@ -3,8 +3,9 @@ Code fix for test_simple.py and config.json
 
 I want High quylity Studio images, I am using Truestudio if other class available better image output quality, please use that.
 
-The main script takes camera parameters from the json file, like dimensions of output image, views/positions, background color, maybe lights, brightness level(enumerator), scale/fit(scale is better like 0.9), I do not whatelse available in NX maybe scenes, I just want diverese images 
+The main script takes camera parameters from the json file, like dimensions of output image, views/positions, background color, maybe lights, brightness, scale/fit(scale is better like 0.9), I do not whatelse available in NX maybe scenes, I just want diverese images 
 
+Prespective view is required
 
 Views I need: Front, top, bottom, back, right, left, front right side 45°, front left side 45°, front top side 45°, front bottom side 45° and isometric(camera position should be from front bottom cornor to up)
 
